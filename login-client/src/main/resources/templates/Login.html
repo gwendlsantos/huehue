@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<style>
+body{
+	background: url("blurred.jpg");
+	background-size: 1280px 1024px;
+	font-family: Century Gothic;
+}
+
+div{
+
+	position: fixed;
+	top: 50px;
+	left: 330px;
+	padding: 100px;
+	margin: auto;
+	display: block;
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 25px;
+	width: 600px;
+	padding: 10px 10px;
+}
+
+table{
+	margin: auto;
+
+
+
+}
+
+input{
+
+	align: center;
+	width: 200px;
+	padding: 5px;
+	text-align: center;
+	font-family: "Century Gothic";
+}
+
+
+
+button{
+	color: white;
+	border: none;
+	padding: 15px 190px;
+	font-family: "Century Gothic";
+	font-style: "Italic";
+	background-color: rgb(255,69,0);
+	border-radius: 12px;
+	background-size: cover;
+	font-size: 20px;
+	transition-duration: 0.4s;
+
+}
+
+button:hover{
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+button:active{
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px)
+}
+
+</style>
+<title>Login</title>
+</head>
+<body>
+<form action="/login" method="POST">
+	<div>
+
+		<table>
+
+			<tr>
+				<td align="center">Username: </td>
+				<td align="center"><input type="text" name="username" required="required"/></td>
+			</tr>
+
+			<tr>
+				<td align="center">Password: </td>
+				<td align="center"><input type="password" name="password" required="required"/></td>
+			</tr>
+		</table>
+
+			<table>
+				<tr align="center">
+					<td><button type="submit">Submit</button></td>
+				</tr>
+			</table>
+	</div>
+</form>
+</body>
+</html>

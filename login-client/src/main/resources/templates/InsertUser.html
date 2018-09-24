@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body{
+	padding: 50px;
+	text-align: center;
+	background: url("blurred.jpg");
+	background-size: 1280px 1024px;
+	font-family: Century Gothic;
+}
+
+div{
+
+	position: fixed;
+	top: 100px;
+	left: 330px;
+	padding: 100px;
+	margin: auto;
+	display: block;
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 25px;
+	width: 600px;
+	padding: 10px 10px;
+}
+
+table{
+	margin: auto;
+
+
+
+}
+
+tr{
+
+	padding: 10px;
+}
+
+input{
+
+	align: center;
+	width: 200px;
+	padding: 5px;
+	text-align: center;
+	font-family: "Century Gothic";
+}
+button{
+	color: white;
+	border: none;
+	padding: 15px 190px;
+	font-family: "Century Gothic";
+	font-style: "Italic";
+	background-color: rgb(255,69,0);
+	border-radius: 12px;
+	background-size: cover;
+	font-size: 20px;
+	transition-duration: 0.4s;
+
+}
+
+button:hover{
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+button:active{
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px)
+}
+
+a{
+	color: white;
+	font-family: Century Gothic;
+	font-weight: Bold;
+	font-size: 20px;
+}
+
+th{
+	color: white;
+	font-family: Century Gothic;
+	text-align: center;
+	font-size: 20px;
+}
+
+td{
+	font-family: Century Gothic;
+}
+
+select{
+	width: 200px;
+	font-family: Century Gothic;
+	height: 30px;
+
+}
+</style>
+<title>Insert New User</title>
+</head>
+<body>
+<form action="/insert" method="POST">
+
+<a th:href="@{/homeadmin}">Home</a><br></br>
+
+<div>
+
+		<table>
+
+			<tr>
+				<td align="center">First name: </td>
+				<td align="center"><input type="text" name="firstname" required="required"/></td>
+			</tr>
+
+			<tr>
+				<td align="center">Last name: </td>
+				<td align="center"><input type="text" name="lastname" required="required"/></td>
+			</tr>
+
+			<tr>
+				<td align="center">Username: </td>
+				<td align="center"><input type="text" name="username" required="required"/></td>
+			</tr>
+
+			<tr>
+				<td align="center">Password: </td>
+				<td align="center"><input type="password" name="password" required="required"/></td>
+			</tr>
+
+			<tr>
+				<td>Is user an Admin?</td>
+				<td align="center">
+					<input type="text" name="role" required="required"/>
+             	</td>
+			</tr>
+		</table>
+
+			<table>
+				<tr align="center">
+					<td><button type="submit">Submit</button></td>
+				</tr>
+			</table>
+	</div>
+	</form>
+</body>
+</html>
